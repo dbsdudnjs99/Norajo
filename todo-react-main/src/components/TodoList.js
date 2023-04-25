@@ -59,14 +59,14 @@ const TodoList = () => {
     // 컴포넌트를 렌더링합니다.
     return (
         <div className={styles.container}>
-            <h1 className="text-xl mb-4 font-bold underline underline-offset-4 decoration-wavy">
+            <h1 className="decoration-wavy text-xl mb-4 font-bold underline underline-offset-4 decoration-indigo-500">
                 Todo List
             </h1>
             
             {/* 할 일을 입력받는 텍스트 필드입니다. */}
             <input
                 type="text"
-                className="w-full p-1 mb-4 border border-gray-300 rounded"
+                className="shadow-lg w-full p-1 mb-4 border border-gray-300 rounded"
                 value={input}
                 placeholder="Tell me what to do!"
                 onChange={(e) => setInput(e.target.value)}
@@ -74,13 +74,13 @@ const TodoList = () => {
             {/* 종료일자를 입력받는 텍스트 필드입니다. */}
             <input 
                 type="date" 
-                className={styles.dateInput}
+                className="border-gray-400 focus:border-blue-500 rounded-md shadow-sm py-2 px-3 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:ring-1"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
             />
             
             {/* 할 일을 추가하는 버튼입니다. */}
-            <button className="w-40 justify-self-end p-1 mb-4 bg-blue-500 text-white border border-blue-500 rounded hover:bg-white hover:text-blue-500"
+            <button className="rounded-full w-32 justify-self-end p-1 mb-4 ring ring-indigo-500 ring-offset-2 text-indigo-500 hover:bg-indigo-500 hover:text-white"
              onClick={addTodo}>
                 Add Todo
             </button>
