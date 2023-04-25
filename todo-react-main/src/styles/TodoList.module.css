@@ -14,7 +14,6 @@ input[type="text"].itemInput {
 }
 
 button.addButton {
-  padding: 5px;
   background-color: #0070f3;
   color: white;
   border: 1px solid #0070f3;
